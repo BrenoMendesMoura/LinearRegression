@@ -1,6 +1,6 @@
 # LinearRegression
-LinearRegression
 
+This block imports necessary libraries such as Pandas for data manipulation, Seaborn and Matplotlib for visualization, and Scikit-learn for machine learning algorithms.
 
 
 ```python
@@ -9,13 +9,20 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
+This section loads the dataset from a CSV file and drops non-numeric columns, preparing the data for analysis.
+
+
 ```python
 df = pd.read_csv('sample_data/CarPrice_Assignment.csv', encoding='latin1')
 
 colunas_nao_numericas = df.select_dtypes(include=['object']).columns
 
 df = df.drop(columns=colunas_nao_numericas)
+```
 
+Here, a correlation matrix is calculated and visualized using Seaborn's heatmap, showing the correlation between numerical features in the dataset.
+
+```python
 matriz_correlacao = df.corr()
 
 plt.figure(figsize=(10, 8))
@@ -25,6 +32,9 @@ plt.show()
 ```
 
 ![image](https://github.com/BrenoMendesMoura/LinearRegression/assets/80074264/2ce26665-f0ba-4e80-a8d8-62426ba14257)
+
+
+This block splits the data into training and testing sets using the train_test_split function from Scikit-learn.
 
 ```python
 from sklearn.linear_model import LinearRegression
@@ -41,6 +51,9 @@ modelo.fit(X_train, y_train)
 
 y_pred = modelo.predict(X_test)
 ```
+
+Here, a linear regression model is created using Scikit-learn's LinearRegression class, and predictions are made on the test set.
+
 ```python
 plt.scatter(X_test, y_test, color='blue', label='Dados reais')
 plt.plot(X_test, y_pred, color='red', label='Linha de regressão')
