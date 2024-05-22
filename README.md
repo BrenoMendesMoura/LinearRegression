@@ -9,7 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-
+```python
 df = pd.read_csv('sample_data/CarPrice_Assignment.csv', encoding='latin1')
 
 colunas_nao_numericas = df.select_dtypes(include=['object']).columns
@@ -22,11 +22,11 @@ plt.figure(figsize=(10, 8))
 sns.heatmap(matriz_correlacao, annot=True, cmap='coolwarm', center=0)
 plt.title('Matriz de Correlação')
 plt.show()
-
+```
 
 ![image](https://github.com/BrenoMendesMoura/LinearRegression/assets/80074264/2ce26665-f0ba-4e80-a8d8-62426ba14257)
 
-
+```python
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
@@ -40,8 +40,8 @@ modelo = LinearRegression()
 modelo.fit(X_train, y_train)
 
 y_pred = modelo.predict(X_test)
-
-
+```
+```python
 plt.scatter(X_test, y_test, color='blue', label='Dados reais')
 plt.plot(X_test, y_pred, color='red', label='Linha de regressão')
 plt.xlabel('price')
@@ -59,7 +59,7 @@ print('Intercepto (b):', modelo.intercept_)
 novo_preco = 100000
 previsao_enginesize = modelo.predict([[novo_preco]])
 print(f'Previsão de enginesize para o preço de {novo_preco}:', previsao_enginesize[0])
-
+```
 
 
 ![image](https://github.com/BrenoMendesMoura/LinearRegression/assets/80074264/516c98cf-94e4-44bc-8f91-e9fa9409b409)
