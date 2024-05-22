@@ -1,6 +1,6 @@
 # LinearRegression
 
-This block imports necessary libraries such as Pandas for data manipulation, Seaborn and Matplotlib for visualization, and Scikit-learn for machine learning algorithms.
+*This block imports necessary libraries such as Pandas for data manipulation, Seaborn and Matplotlib for visualization, and Scikit-learn for machine learning algorithms.*
 
 
 ```python
