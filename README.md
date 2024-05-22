@@ -63,4 +63,6 @@ print(f'Previsão de enginesize para o preço de {novo_preco}:', previsao_engine
 
 
 ![image](https://github.com/BrenoMendesMoura/LinearRegression/assets/80074264/516c98cf-94e4-44bc-8f91-e9fa9409b409)
+![image](https://github.com/BrenoMendesMoura/LinearRegression/assets/80074264/05bfc161-c163-4b7a-93bd-665384f59c50)
+
 
